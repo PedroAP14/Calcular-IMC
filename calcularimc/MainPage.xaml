@@ -9,21 +9,25 @@
             Spacing="25">
 
             <Label
-                Text="Nome:"/>
+                Text="Nome:"
+                FontSize="18"/>
 
             <Entry
                 x:Name="NomeEntry"
                 Placeholder="Insira seu nome aqui"/>
 
             <Label
-                Text="Idade:"/>
+                Text="Idade:"
+                FontSize="18"/>
 
             <Entry
                 x:Name="IdadeEntry"
+                Keyboard="Numeric"
                 Placeholder="Insira sua idade aqui"/>
 
             <Label
-                Text="Gênero:"/>
+                Text="Gênero:"
+                FontSize="18"/>
 
             <Picker 
                 x:Name="GeneroPicker"
@@ -38,47 +42,59 @@
             </Picker>
 
             <Label
+                Text="Altura (M):"
+                FontSize="18"/>
+            
+            <Label
                 x:Name="AlturaLabel"
-                Text="Altura (M):"/>
+                Text="1,3"
+                FontSize="18"/>
 
             <Slider
                 x:Name="AlturaSlider"
                 Maximum="2.72"
                 Minimum="1.30"
+                Value="1.30"
                 ValueChanged="AlturaSlider_ValueChanged"/>
 
             <Label
+                Text="Peso (Kg):"
+                FontSize="18"/>
+            
+            <Label
                 x:Name="PesoLabel"
-                Text="Peso (Kg):"/>
+                Text="20"
+                FontSize="18"/>
 
             <Slider
                 x:Name="PesoSlider"
                 Maximum="300"
                 Minimum="20"
+                Value="20"
                 ValueChanged="PesoSlider_ValueChanged"/>
 
             <Label
                 x:Name="ImcLabel"
-                Text="IMC:"/>
+                Text="IMC:"
+                FontSize="18"/>
 
             <Label
                 x:Name="ClassificacaoPesoLabel"
-                Text=""/>
+                Text=""
+                FontSize="20"/>
 
             <Label
                 x:Name="SugestaoPesoLabel"
-                Text=""/>
-
-            <Label
-                x:Name="AvisoLabel"
-                TextColor="Red"
-                Text=""/>
+                Text=""
+                TextColor="Aqua"
+                FontSize="20"/>
 
             <Button
                 x:Name="CalcularImcButton"
                 Text="Calcular IMC"
                 Clicked="CalcularImcButton_Clicked"
-                HorizontalOptions="Fill" />
+                HorizontalOptions="Fill"
+                FontSize="16"/>
             
         </VerticalStackLayout>
     </ScrollView>
