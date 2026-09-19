@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="calcularimc.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label
+                Text="Nome:"/>
+
+            <Entry
+                x:Name="NomeEntry"
+                Placeholder="Insira seu nome aqui"/>
+
+            <Label
+                Text="Idade:"/>
+
+            <Entry
+                x:Name="IdadeEntry"
+                Placeholder="Insira sua idade aqui"/>
+
+            <Label
+                Text="Gênero:"/>
+
+            <Picker 
+                x:Name="GeneroPicker"
+                Title="" >
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Masculino</x:String>
+                        <x:String>Feminino</x:String>
+                        <x:String>Outro</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label
+                x:Name="AlturaLabel"
+                Text="Altura (M):"/>
+
+            <Slider
+                x:Name="AlturaSlider"
+                Maximum="2.72"
+                Minimum="1.30"
+                ValueChanged="AlturaSlider_ValueChanged"/>
+
+            <Label
+                x:Name="PesoLabel"
+                Text="Peso (Kg):"/>
+
+            <Slider
+                x:Name="PesoSlider"
+                Maximum="300"
+                Minimum="20"
+                ValueChanged="PesoSlider_ValueChanged"/>
+
+            <Label
+                x:Name="ImcLabel"
+                Text="IMC:"/>
+
+            <Label
+                x:Name="ClassificacaoPesoLabel"
+                Text=""/>
+
+            <Label
+                x:Name="SugestaoPesoLabel"
+                Text=""/>
+
+            <Label
+                x:Name="AvisoLabel"
+                TextColor="Red"
+                Text=""/>
+
+            <Button
+                x:Name="CalcularImcButton"
+                Text="Calcular IMC"
+                Clicked="CalcularImcButton_Clicked"
+                HorizontalOptions="Fill" />
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
